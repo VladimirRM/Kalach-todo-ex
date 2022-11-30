@@ -1,20 +1,29 @@
 import React, { useState } from "react";
 
-const ToDoForm = () => {
+const ToDoForm = ({addTask}) => {
   const [userInput, setUserInput] = useState("");
-  const handleSubmit=()=>{
 
-  }
-  const handleChange=()=>{
+  const handleChange = (e) => {
+    setUserInput(e.currentTarget.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    addTask(userInput)
+  };
+  const handleKeyPress = () => {};
 
-  }
-  return <form onSubmit={handleSubmit}>
-    <input
-     type="text" 
-     value={userInput}
-     onChange={handleChange}
-     />
-  </form>;
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        value={userInput}
+        type="text"
+        onChange={handleChange}
+        onKeyDown={handleKeyPress}
+        placeholder="Enter value"
+      />
+      <button>Save</button>
+    </form>
+  );
 };
 
 export default ToDoForm;
