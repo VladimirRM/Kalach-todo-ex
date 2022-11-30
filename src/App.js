@@ -5,7 +5,11 @@ import ToDoForm from "./ToDoForm";
 
 function App() {
   const [todos, setTodos] = useState([]);
-  addTask = () => {};
+  addTask = (userInput) => {
+    if(userInput){
+      const newItem = 
+    }
+  };
   removeTask = () => {};
   handleToggle = () => {};
 
