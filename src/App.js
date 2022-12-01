@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import ToDo from "./ToDo";
-import './index.css'
+import "./index.css";
 import ToDoForm from "./ToDoForm";
 
 function App() {
   const [todos, setTodos] = useState([]);
   addTask = (userInput) => {
-    if(userInput){
-      const newItem = 
+    if (userInput) {
+      const newItem = {
+        id: Math.random().toString(36).substring(2, 9),
+        task: userInput,
+        complete: false,
+      };
+      setTodos([...todos,newItem])
     }
   };
   removeTask = () => {};
