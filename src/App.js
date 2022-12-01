@@ -12,11 +12,24 @@ function App() {
         task: userInput,
         complete: false,
       };
-      setTodos([...todos,newItem])
+      setTodos([...todos, newItem]);
     }
   };
-  removeTask = () => {};
-  handleToggle = () => {};
+  removeTask = (id) => {
+    setTodos([...todos.filter((todo) => todo.id !== todo.id)]);
+  };
+  handleToggle = (id) => {
+    setTodos([
+      ...todos.map((todo) =>
+        todo.id
+          ? {
+              ...todo,
+              complete: !todo.complete,
+            }
+          : { ...todo }
+      ),
+    ]);
+  };
 
   return (
     <div className="App">
@@ -37,3 +50,4 @@ function App() {
     </div>
   );
 }
+export default App
