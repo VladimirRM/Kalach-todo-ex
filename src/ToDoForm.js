@@ -4,7 +4,13 @@ const ToDoForm = () => {
   const [userInput,setUserInput]= useState('')
   return (
     <form  onSubmit={handleSubmit}>
-      <input type="text" />
+      <input type="text"
+      value={userInput}
+      onChange={handleChange}
+      onKeyDown={handleKeyPress}
+      placeholder='Enter something...'
+      
+      />
     </form>
   )
 };
