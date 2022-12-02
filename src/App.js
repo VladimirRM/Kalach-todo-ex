@@ -1,53 +1,45 @@
 import React, { useState } from "react";
-import ToDo from "./ToDo";
 import "./index.css";
+import ToDo from "./ToDo";
 import ToDoForm from "./ToDoForm";
 
 function App() {
   const [todos, setTodos] = useState([]);
-  addTask = (userInput) => {
+
+  const addTask = (userInput) => {
     if (userInput) {
       const newItem = {
         id: Math.random().toString(36).substring(2, 9),
         task: userInput,
-        complete: false,
+        completed: false,
       };
       setTodos([...todos, newItem]);
     }
   };
-  removeTask = (id) => {
-    setTodos([...todos.filter((todo) => todo.id !== todo.id)]);
-  };
-  handleToggle = (id) => {
-    setTodos([
-      ...todos.map((todo) =>
-        todo.id
-          ? {
-              ...todo,
-              complete: !todo.complete,
-            }
-          : { ...todo }
-      ),
-    ]);
-  };
+
+  const removeTask = () => {};
+
+  const handleToggle = () => {};
 
   return (
     <div className="App">
       <header>
         <h1>Todo List:{todos.length}</h1>
       </header>
-      <ToDoForm />
+
+      <ToDoForm addTask={addTask} />
       {todos.map((todo) => {
         return (
           <ToDo
             key={todo.id}
             todo={todo}
-            removeTask={removeTask}
             toggleTask={handleToggle}
+            removeTask={removeTask}
           />
         );
       })}
     </div>
   );
 }
-export default App
+
+export default App;
