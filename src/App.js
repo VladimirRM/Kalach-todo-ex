@@ -16,7 +16,6 @@ function App() {
       setTodos([...todos, newItem]);
     }
   };
-
   const removeTask = () => {};
 
   const handleToggle = () => {};
