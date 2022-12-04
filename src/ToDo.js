@@ -5,7 +5,7 @@ const ToDo = ({ toggleTask, todo, removeTask }) => {
   
   <div className="item-todo">
     <div></div>
-    <dir></dir>
+    <div className="item-delete" ></div>
   </div>
 
   );
