@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-const ToDoForm = () => {
+const ToDoForm = ({addTask}) => {
+  const [userInput,setUserInput]=useState('')
+
+   const handleSubmit
   return (
-    <div>ToDoForm</div>
+    <form onSubmit={handleSubmit}>
+
+    </form>
   )
 }
 
