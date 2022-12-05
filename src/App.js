@@ -10,6 +10,18 @@ function App() {
   removeTask = () => {};
   handleToggle = () => {};
 
-  return <div className="App"></div>;
+  return <div className="App">
+    <header>
+   <h1>Todo List{todo.length}</h1>
+
+    </header>
+    <ToDoForm addTask={addTask}/>
+    {todos.map((todo)=>{
+      return(
+        <ToDo
+        />
+      )
+    })}
+  </div>;
 }
 export default App;
