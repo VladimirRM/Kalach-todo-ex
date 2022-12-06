@@ -1,30 +1,31 @@
-import React,{useState} from 'react'
-import ToDo from './ToDo'
-import ToDoForm from './ToDoForm'
-import "./index.css"
+import React, { useState } from "react";
+import ToDo from "./ToDo";
+import ToDoForm from "./ToDoForm";
+import "./index.css";
 const App = () => {
+  const [todos, setTodos] = useState([]);
 
-  const [todos,setTodos]=useState([])
+  const addTask = () => {};
 
-  const addTask = ()=>{
+  const removeTask = () => {};
 
-  }
+  const handleToggle = () => {};
 
-  const removeTask = ()=>{
+  return <div className="App">
+    <header>
+      <h1>{todos.length}</h1>
+      <ToDoForm addTask={addTask}/>
+  {todos.map((todo)=>{
+    return(
+      <ToDo key={todo.id}
+      todo={todo}
+      removeTask={removeTask}
+      toggleTask={handleToggle}
+      />
+    )
+  })}
+    </header>
+  </div>;
+};
 
-  }
-
-  const handleToggle = ()=>{
-
-  }
-
-
-
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default App
+export default App;
