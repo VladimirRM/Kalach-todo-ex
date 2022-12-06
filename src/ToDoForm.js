@@ -1,10 +1,17 @@
 import React,{useState} from 'react'
 
 const ToDoForm = ({addTask}) => {
+
+  const [userInput,setUserInput]= useState('')
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
+      <input type="text"
+      onChange={handleChange}
+      value={userInput}
+      onKeyDown={handleKeyPress} 
+      placeholder='Enter something...'/>
       
-    </div>
+    </form>
   )
 }
 
