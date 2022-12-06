@@ -16,17 +16,17 @@ const App = () => {
     }
   };
 
-  const removeTask = (id) => {
-    setTodos([
-      ...todos.filter((todo)=>todo.id !==id)
-    ])
-  };
+const removeTask =(id)=>{
+  setTodos([
+    ...todos.filter((todo)=>todo.id !==id)
+  ])
+}
 
-  const handleToggle = (id) => {
-    setTodos([
-      ...todos.map((todo)=>todo.id===id?{...todo,complete: !todo,complete}:{...todo})
-    ])
-  };
+const handleToggle =(id)=>{
+  setTodos([
+    ...todos.map((todo)=>todo.id?{...todo,complete: !todo.complete}:{...todo})
+  ])
+}
 
   return (
     <div className="App">
