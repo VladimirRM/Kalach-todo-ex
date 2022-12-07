@@ -2,7 +2,7 @@ import React from 'react'
 
 const ToDo = ({todo,removeTask,toggleTask}) => {
   return (
-    <div>
+    <div className='item-todo' key={todo.id}>
       
     </div>
   )
