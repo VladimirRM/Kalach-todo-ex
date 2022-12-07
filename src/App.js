@@ -16,8 +16,16 @@ const App = () => {
       setTodos([...todos, newItem]);
     }
   };
-  const removeTask = () => {};
-  const handleToggle = () => {};
+  const removeTask = (id) => {
+    setTodos([...todos.filter((todo) => todo.id !== id)]);
+  };
+  const handleToggle = (id) => {
+    setTodos([
+      ...todos.map((todo) =>
+        todo.id ? { ...todo, complete: !todo.complete } : { ...todo }
+      ),
+    ]);
+  };
 
   return (
     <div className="App">
