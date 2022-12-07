@@ -6,6 +6,12 @@ const ToDoForm = () => {
   const handleSubmit =()=>{
     
   }
+  const handleChange =()=>{
+
+  }
+  const handleKeyPress =()=>{
+
+  }
 
 
 
