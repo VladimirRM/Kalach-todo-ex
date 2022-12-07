@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const ToDoForm = () => {
+const ToDoForm = ({addTask}) => {
   const [userInput, setUserInput] = useState("");
 
-  const handleSubmit =()=>{
-    
-  }
   const handleChange =()=>{
 
+  }
+  const handleSubmit =()=>{
+    
   }
   const handleKeyPress =()=>{
 
