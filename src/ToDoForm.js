@@ -28,6 +28,7 @@ const ToDoForm = ({ addTask }) => {
         onKeyDown={handleKeyPress}
         placeholder="Enter something"
       />
+      <button>Save</button>
     </form>
   );
 };
